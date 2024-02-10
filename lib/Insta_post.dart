@@ -113,39 +113,37 @@ class _InstaPostState extends State<InstaPost> {
               ),
             ],
           ),
-
-          // const Padding(
-          //   padding: EdgeInsets.symmetric(vertical: 20),
-          //   child: Row(
-          //     crossAxisAlignment: CrossAxisAlignment.end,
-          //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //     children: [
-          //       Icon(Icons.home, color: Colors.white, size: 29),
-          //       Padding(
-          //         padding: EdgeInsets.symmetric(horizontal: 0),
-          //         child: Icon(Icons.search, color: Colors.white, size: 29),
-          //       ),
-          //       Icon(Icons.add_box_outlined, color: Colors.white, size: 29),
-          //       Icon(Icons.slideshow, color: Colors.white, size: 29),
-          //       Icon(Icons.circle, color: Colors.white, size: 29),
-          //     ],
-          //   ),
-          // )
         ],
       ),
-      bottomNavigationBar:
-          BottomNavigationBar(backgroundColor: Colors.black, items: const [
-        BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Colors.white), label: ""),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.search, color: Colors.white), label: ""),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.add_box_outlined, color: Colors.white), label: ""),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.slideshow, color: Colors.white), label: ""),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.circle, color: Colors.white), label: ""),
-      ]),
+      bottomNavigationBar: const Padding(
+        padding: EdgeInsets.symmetric(vertical: 20),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Icon(Icons.home, color: Colors.white, size: 29),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 0),
+              child: Icon(Icons.search, color: Colors.white, size: 29),
+            ),
+            Icon(Icons.add_box_outlined, color: Colors.white, size: 29),
+            Icon(Icons.slideshow, color: Colors.white, size: 29),
+            Icon(Icons.circle, color: Colors.white, size: 29),
+          ],
+        ),
+      ),
+      //     BottomNavigationBar(backgroundColor: Colors.black, items: const [
+      //   BottomNavigationBarItem(
+      //       icon: Icon(Icons.home, color: Colors.white), label: ""),
+      //   BottomNavigationBarItem(
+      //       icon: Icon(Icons.search, color: Colors.white), label: ""),
+      //   BottomNavigationBarItem(
+      //       icon: Icon(Icons.add_box_outlined, color: Colors.white), label: ""),
+      //   BottomNavigationBarItem(
+      //       icon: Icon(Icons.slideshow, color: Colors.white), label: ""),
+      //   BottomNavigationBarItem(
+      //       icon: Icon(Icons.circle, color: Colors.white), label: ""),
+      // ]),
     );
   }
 }
