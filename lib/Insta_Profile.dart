@@ -15,7 +15,10 @@ class _InstaProfileState extends State<InstaProfile> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.black,
-          leading: const Icon(Icons.lock, color: Colors.white),
+          leading: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: const Icon(Icons.lock, color: Colors.white),
+          ),
           leadingWidth: 20,
           title: const Text("gurjotshergill29",
               style: TextStyle(color: Colors.white)),
@@ -195,14 +198,14 @@ class _InstaProfileState extends State<InstaProfile> {
                     )),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Icon(Icons.grid_on, color: Colors.white, size: 29),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    padding: EdgeInsets.symmetric(horizontal: 30),
                     child: Icon(Icons.slideshow, color: Colors.white, size: 29),
                   ),
                   Icon(Icons.account_box_outlined,
@@ -210,16 +213,35 @@ class _InstaProfileState extends State<InstaProfile> {
                 ],
               ),
             ),
-            GridView.builder(
-                shrinkWrap: true,
-                itemCount: 6,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3),
-                itemBuilder: (context, index) {
-                  return Container(
-                    color: Colors.grey,
-                  );
-                })
+            Expanded(
+              child: GridView.builder(
+                  shrinkWrap: true,
+                  itemCount: 6,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      color: Colors.grey,
+                    );
+                  }),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 20),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(Icons.home, color: Colors.white, size: 29),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 0),
+                    child: Icon(Icons.search, color: Colors.white, size: 29),
+                  ),
+                  Icon(Icons.add_box_outlined, color: Colors.white, size: 29),
+                  Icon(Icons.slideshow, color: Colors.white, size: 29),
+                  Icon(Icons.circle, color: Colors.white, size: 29),
+                ],
+              ),
+            )
           ],
         ),
       ),
