@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:insta_clone/Insta_Profile.dart';
+// import 'package:insta_clone/Insta_Profile.dart';
+import 'package:insta_clone/Insta_post.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: InstaProfile(),
+      home: InstaPost(),
     );
   }
 }

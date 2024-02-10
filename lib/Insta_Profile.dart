@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insta_clone/Insta_post.dart';
 
 class InstaProfile extends StatefulWidget {
   const InstaProfile({super.key});
@@ -15,13 +16,14 @@ class _InstaProfileState extends State<InstaProfile> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.black,
-          leading: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: const Icon(Icons.lock, color: Colors.white),
+          leading: const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Icon(Icons.lock, color: Colors.white),
           ),
           leadingWidth: 20,
           title: const Text("gurjotshergill29",
-              style: TextStyle(color: Colors.white)),
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
           actions: const [
             Padding(
               padding: EdgeInsets.all(10),
@@ -62,8 +64,14 @@ class _InstaProfileState extends State<InstaProfile> {
                   padding: EdgeInsets.only(left: 50, right: 8),
                   child: Column(
                     children: [
-                      Text("10", style: TextStyle(color: Colors.white)),
-                      Text("posts", style: TextStyle(color: Colors.white)),
+                      Text("10",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
+                      Text("posts",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
@@ -71,8 +79,14 @@ class _InstaProfileState extends State<InstaProfile> {
                   padding: EdgeInsets.all(10),
                   child: Column(
                     children: [
-                      Text("29M", style: TextStyle(color: Colors.white)),
-                      Text("followers", style: TextStyle(color: Colors.white)),
+                      Text("29M",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
+                      Text("followers",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
@@ -80,8 +94,14 @@ class _InstaProfileState extends State<InstaProfile> {
                   padding: EdgeInsets.all(10),
                   child: Column(
                     children: [
-                      Text("1", style: TextStyle(color: Colors.white)),
-                      Text("following", style: TextStyle(color: Colors.white)),
+                      Text("1",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
+                      Text("following",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
@@ -119,7 +139,9 @@ class _InstaProfileState extends State<InstaProfile> {
                     child: const Text(
                       "Editing profile",
                       style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
                     ),
                   ),
                 ),
@@ -136,7 +158,9 @@ class _InstaProfileState extends State<InstaProfile> {
                     child: const Text(
                       "Share profile",
                       style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
                     ),
                   ),
                 ),
@@ -220,8 +244,16 @@ class _InstaProfileState extends State<InstaProfile> {
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3),
                   itemBuilder: (context, index) {
-                    return Container(
-                      color: Colors.grey,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => const InstaPost())));
+                      },
+                      child: Container(
+                        color: Colors.grey,
+                      ),
                     );
                   }),
             ),
