@@ -132,18 +132,7 @@ class _InstaPostState extends State<InstaPost> {
           ],
         ),
       ),
-      //     BottomNavigationBar(backgroundColor: Colors.black, items: const [
-      //   BottomNavigationBarItem(
-      //       icon: Icon(Icons.home, color: Colors.white), label: ""),
-      //   BottomNavigationBarItem(
-      //       icon: Icon(Icons.search, color: Colors.white), label: ""),
-      //   BottomNavigationBarItem(
-      //       icon: Icon(Icons.add_box_outlined, color: Colors.white), label: ""),
-      //   BottomNavigationBarItem(
-      //       icon: Icon(Icons.slideshow, color: Colors.white), label: ""),
-      //   BottomNavigationBarItem(
-      //       icon: Icon(Icons.circle, color: Colors.white), label: ""),
-      // ]),
+      
     );
   }
 }
