@@ -61,13 +61,11 @@ class _InstaPostState extends State<InstaPost> {
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 300),
-                child: Icon(
-                  Icons.more_horiz,
-                  color: Colors.white,
-                ),
-              )
+              Spacer(),
+              Icon(
+                Icons.more_horiz,
+                color: Colors.white,
+              ),
             ],
           ),
           GridView.builder(
@@ -103,36 +101,56 @@ class _InstaPostState extends State<InstaPost> {
                 color: Colors.white,
                 size: 36,
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 300),
-                child: Icon(
-                  Icons.bookmark_border,
-                  color: Colors.white,
-                  size: 36,
-                ),
+              Spacer(),
+              Icon(
+                Icons.bookmark_border,
+                color: Colors.white,
+                size: 36,
               ),
             ],
           ),
         ],
       ),
-      bottomNavigationBar: const Padding(
-        padding: EdgeInsets.symmetric(vertical: 20),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Icon(Icons.home, color: Colors.white, size: 29),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0),
-              child: Icon(Icons.search, color: Colors.white, size: 29),
-            ),
-            Icon(Icons.add_box_outlined, color: Colors.white, size: 29),
-            Icon(Icons.slideshow, color: Colors.white, size: 29),
-            Icon(Icons.circle, color: Colors.white, size: 29),
-          ],
-        ),
-      ),
-      
+      bottomNavigationBar: BottomNavigationBar(currentIndex: 2, items: const [
+        BottomNavigationBarItem(
+            backgroundColor: Colors.black,
+            icon: Icon(Icons.home, color: Colors.white, size: 29),
+            label: ""),
+        BottomNavigationBarItem(
+            backgroundColor: Colors.black,
+            icon: Icon(Icons.search, color: Colors.white, size: 29),
+            label: ""),
+        BottomNavigationBarItem(
+            backgroundColor: Colors.black,
+            icon: Icon(Icons.add_box_outlined, color: Colors.white, size: 29),
+            label: ""),
+        BottomNavigationBarItem(
+            backgroundColor: Colors.black,
+            icon: Icon(Icons.slideshow, color: Colors.white, size: 29),
+            label: ""),
+        BottomNavigationBarItem(
+            backgroundColor: Colors.black,
+            icon: Icon(Icons.circle, color: Colors.white, size: 29),
+            label: ""),
+      ]),
+
+      // const Padding(
+      //   padding: EdgeInsets.symmetric(vertical: 20),
+      //   child: Row(
+      //     crossAxisAlignment: CrossAxisAlignment.end,
+      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     children: [
+      //       Icon(Icons.home, color: Colors.white, size: 29),
+      //       Padding(
+      //         padding: EdgeInsets.symmetric(horizontal: 0),
+      //         child: Icon(Icons.search, color: Colors.white, size: 29),
+      //       ),
+      //       Icon(Icons.add_box_outlined, color: Colors.white, size: 29),
+      //       Icon(Icons.slideshow, color: Colors.white, size: 29),
+      //       Icon(Icons.circle, color: Colors.white, size: 29),
+      //     ],
+      //   ),
+      // ),
     );
   }
 }
